@@ -1,12 +1,12 @@
 package delta
 
 import (
-	. "github.com/r7kamura/gospel"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"strings"
 	"testing"
+	. "github.com/r7kamura/gospel"
 )
 
 func TestRequestBody(t *testing.T) {
@@ -36,7 +36,7 @@ func TestRequestBody(t *testing.T) {
 			return []string{"production"}
 		}
 	})
-	server.OnMungeHeader(func(backend string, header *http.Header) {
+	server.OnMungeHeader(func(backend string, header *http.Header, req *http.Request) {
 		header.Add("Delta-Backend", backend)
 	})
 

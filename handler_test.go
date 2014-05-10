@@ -2,11 +2,11 @@ package delta
 
 import (
 	"fmt"
-	. "github.com/r7kamura/gospel"
-	"github.com/r7kamura/router"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+	. "github.com/r7kamura/gospel"
+	"github.com/r7kamura/router"
 )
 
 func setupServer() *Server {
@@ -23,7 +23,7 @@ func setupServer() *Server {
 		}
 	})
 
-	server.OnMungeHeader(func(backend string, header *http.Header) {
+	server.OnMungeHeader(func(backend string, header *http.Header, req *http.Request) {
 		if backend == "testing" {
 			header.Add("X-Delta-Sandbox", "1")
 		}
