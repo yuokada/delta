@@ -1,9 +1,9 @@
 package delta
 
 import (
+	. "github.com/r7kamura/gospel"
 	"net/http"
 	"testing"
-	. "github.com/r7kamura/gospel"
 )
 
 func TestServer(t *testing.T) {

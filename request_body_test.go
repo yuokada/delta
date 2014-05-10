@@ -1,12 +1,12 @@
 package delta
 
 import (
+	. "github.com/r7kamura/gospel"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"strings"
 	"testing"
-	. "github.com/r7kamura/gospel"
 )
 
 func TestRequestBody(t *testing.T) {

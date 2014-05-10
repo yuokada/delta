@@ -2,11 +2,11 @@ package delta
 
 import (
 	"fmt"
+	. "github.com/r7kamura/gospel"
+	"github.com/r7kamura/router"
 	"net/http"
 	"net/http/httptest"
 	"testing"
-	. "github.com/r7kamura/gospel"
-	"github.com/r7kamura/router"
 )
 
 func setupServer() *Server {
